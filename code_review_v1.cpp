@@ -26,7 +26,7 @@ bool isWin(char game[3][3]){
 
 }
 
- 
+ void showGame(char game[i][j]){}
 
 int main(){
 
@@ -52,7 +52,20 @@ int main(){
 
                   cout << "Which cell to mark? i:[1..3], j:[1..3]: ";
 
-                  cin >> i >> j;
+                  do{
+                        if (cin.fail()) count << "please input integer" <<endl;
+                        cin >> i >>j ;
+                  }while (cin.fail());
+                  
+                  while (!(1<=i<=3 && 1<=j<=3){
+                        count << "input error! try again";
+                        cin >> i >> j;
+                  }
+                         while ( games[i-1][j-1]!=''){
+                               count << "this cell is occupied! try again!";
+                               cin >>i >>j;
+                         }
+                         
 
                   if (turn == false)
 
